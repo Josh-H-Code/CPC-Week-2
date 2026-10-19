@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2021 Lamborghini Countach LPI 800-4 | Official Interactive Experience</title>
+  <meta name="description" content="Experience the 2021 Lamborghini Countach LPI 800-4. Streamlined high-performance V12 hybrid electric sports car. Power, Speed and Rarity. Claim 1 of 112 today.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Import maps polyfill & configuration for Three.js -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "./js/libs/three.module.js",
+      "three/addons/": "./js/libs/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- LOADING SCREEN -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loader-content">
+      <div class="loader-logo-wrap">
+        <img src="2021-lamborghini-countach-lpi-800-4/textures/lamborghini_PNG10709.png" alt="Lamborghini Bull Emblem" class="loader-crest">
+      </div>
+      <h1 class="loader-brand">AUTOMOBILI LAMBORGHINI</h1>
+      <h2 class="loader-title">2021 COUNTACH LPI 800-4</h2>
+      <p class="loader-status" id="loader-status">INITIALIZING V12 HYBRID SYSTEMS...</p>
+      <div class="loader-bar-bg">
+        <div class="loader-bar-fill" id="loader-bar"></div>
+      </div>
+      <span class="loader-percentage" id="loader-pct">0%</span>
+    </div>
+  </div>
+
+  <!-- FIXED 3D VIEWPORT -->
+  <div id="canvas-container"></div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="site-header">
+    <div class="brand-container">
+      <img src="2021-lamborghini-countach-lpi-800-4/textures/lamborghini_PNG10709.png" alt="Lamborghini Logo" class="brand-crest">
+      <div class="brand-text">
+        <span class="brand-name">LAMBORGHINI</span>
+        <span class="brand-model">COUNTACH LPI 800-4</span>
+      </div>
+    </div>
+
+    <nav class="nav-links">
+      <a href="#hero" class="nav-item active" data-section="0">OVERVIEW</a>
+      <a href="#colours" class="nav-item" data-section="1">COLOURS & INTERIOR</a>
+      <a href="#steering" class="nav-item" data-section="2">4WD & 4WS</a>
+      <a href="#performance" class="nav-item" data-section="3">PERFORMANCE</a>
+      <a href="#cta" class="nav-item cta-nav" data-section="4">CLAIM 1 OF 112</a>
+    </nav>
+
+    <div class="header-controls">
+      <!-- Audio Toggle -->
+      <button id="audio-toggle" class="ctrl-btn" title="Toggle Supercar Sound" aria-label="Toggle Supercar Sound">
+        <span class="ctrl-icon" id="audio-icon">🔇</span>
+        <span class="ctrl-label" id="audio-text">SOUND OFF</span>
+      </button>
+
+      <!-- Free Orbit Camera Toggle -->
+      <button id="orbit-toggle" class="ctrl-btn" title="Toggle 360° Free Camera" aria-label="Toggle 360° Free Camera">
+        <span class="ctrl-icon">🔄</span>
+        <span class="ctrl-label" id="orbit-text">360° ORBIT</span>
+      </button>
+
+      <!-- Quick CTA -->
+      <button id="quick-claim-btn" class="gold-pill-btn">CLAIM 1 OF 112</button>
+    </div>
+  </header>
+
+  <!-- LIVE HUD STATUS INDICATOR -->
+  <div class="hud-indicator" id="hud-indicator">
+    <div class="hud-dot"></div>
+    <span class="hud-text" id="hud-text">LAUNCH PROFILE | HORIZONTAL SIDE VIEW</span>
+  </div>
+
+  <!-- SCROLLABLE STORYTELLING CONTENT SECTIONS -->
+  <main id="story-container">
+
+    <!-- HERO SECTION (I2) -->
+    <section class="story-section" id="hero" data-index="0">
+      <div class="section-content hero-content">
+        <div class="hero-badge">
+          <span class="gold-accent-line"></span>
+          <span>AN ICON REBORN &bull; LIMITED EDITION</span>
+          <span class="gold-accent-line"></span>
+        </div>
+        <h1 class="hero-headline">
+          <span class="wordmark-wrap">
+            <img src="2021-lamborghini-countach-lpi-800-4/textures/Lamborghini-text-logo-1440x900.png" alt="LAMBORGHINI" class="hero-wordmark">
+          </span>
+          <span class="sub-headline">COUNTACH LPI 800-4</span>
+        </h1>
+        <p class="hero-summary">
+          Grey Streamlined High-Performance Electric Sports Car. A motorized masterpiece powered by a naturally aspirated 6.5L V12 and 48V electric motor with groundbreaking supercapacitor technology.
+        </p>
+
+        <div class="hero-key-metrics">
+          <div class="metric-item">
+            <span class="metric-value">814 <span class="unit">CV</span></span>
+            <span class="metric-label">POWER</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-value">221 <span class="unit">MPH</span></span>
+            <span class="metric-label">SPEED</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-value">1 <span class="unit">OF</span> 112</span>
+            <span class="metric-label">RARITY</span>
+          </div>
+        </div>
+
+        <div class="hero-callout">
+          <span class="smoke-badge">&#9889; ACTIVE ACCELERATION PROFILE &bull; TIRE BURNOUT TRAIL</span>
+        </div>
+
+        <div class="scroll-cue">
+          <span class="cue-text">SCROLL TO EXPLORE FEATURES</span>
+          <div class="chevron-down"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURE 1: INTERIOR DESIGN & COLOUR OPTIONS (I3) -->
+    <section class="story-section" id="colours" data-index="1">
+      <div class="section-content feature-content">
+        <div class="feature-tag">FEATURE 01 &bull; POWER & CRAFTSMANSHIP</div>
+        <h2 class="feature-title">INTERIOR DESIGN & COLOUR OPTIONS</h2>
+        <p class="feature-desc">
+          Crafted with an ultra-lightweight carbon fiber monocoque chassis and luxurious Italian leather cockpit. As you scroll, experience the exterior evolve through historic Lamborghini racing hues.
+        </p>
+
+        <!-- Dynamic Color Palette & Swatches (I3 requirement: red, orange, blue, silver, black, white, purple) -->
+        <div class="color-palette-card">
+          <div class="palette-header">
+            <span class="palette-title">SELECT EXTERIOR FINISH</span>
+            <span class="palette-active-name" id="current-color-name">Grigio Telesto (Silver/Grey)</span>
+          </div>
+          <div class="color-swatches" id="color-swatches">
+            <button class="color-chip" data-color="#C4151C" data-name="Rosso Mars" title="Rosso Mars (Red)" style="--chip-color: #C4151C;"></button>
+            <button class="color-chip" data-color="#FF5E00" data-name="Arancio Atlas" title="Arancio Atlas (Orange)" style="--chip-color: #FF5E00;"></button>
+            <button class="color-chip" data-color="#0066FF" data-name="Blu Uranus" title="Blu Uranus (Blue)" style="--chip-color: #0066FF;"></button>
+            <button class="color-chip active" data-color="#9EABB3" data-name="Grigio Telesto" title="Grigio Telesto (Silver/Grey)" style="--chip-color: #9EABB3;"></button>
+            <button class="color-chip" data-color="#141416" data-name="Nero Noctis" title="Nero Noctis (Black)" style="--chip-color: #141416;"></button>
+            <button class="color-chip" data-color="#F0F2F5" data-name="Bianco Siderale" title="Bianco Siderale (White)" style="--chip-color: #F0F2F5;"></button>
+            <button class="color-chip" data-color="#6B1782" data-name="Viola Pasifae" title="Viola Pasifae (Purple)" style="--chip-color: #6B1782;"></button>
+          </div>
+          <div class="scroll-note">
+            <span>&uarr;&darr; Scroll down to automatically morph through all 7 exterior colours</span>
+          </div>
+        </div>
+
+        <!-- Interior View Toggle -->
+        <div class="interior-actions">
+          <button id="interior-toggle-btn" class="glass-btn">
+            <span class="btn-icon">💺</span>
+            <span id="interior-btn-text">INSPECT COCKPIT INTERIOR</span>
+          </button>
+          <div class="interior-pills">
+            <span class="info-pill">8.4" HDMI Touchscreen</span>
+            <span class="info-pill">Photocromatic Glass Roof</span>
+            <span class="info-pill">Carbon Monocoque</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURE 2: 4-WHEEL STEERING & 4-WHEEL DRIVE (I4) -->
+    <section class="story-section" id="steering" data-index="2">
+      <div class="section-content feature-content">
+        <div class="feature-tag">FEATURE 02 &bull; PRECISION & CONTROL</div>
+        <h2 class="feature-title">4-WHEEL DRIVE & 4-WHEEL STEERING</h2>
+        <p class="feature-desc">
+          Click on any wheel to inspect mechatronic torque distribution. Dynamic 3D drivetrain lines connect all four wheels, transferring V12 power and managing active front-to-rear steering geometry.
+        </p>
+
+        <!-- Steering Interactivity Card (I4: lines connecting all 4, move left and right) -->
+        <div class="steer-control-card">
+          <div class="steer-header">
+            <span class="steer-label">DYNAMIC 4WS STEERING CONTROL</span>
+            <span class="steer-angle-value" id="steer-angle-display">0.0&deg; STRAIGHT</span>
+          </div>
+
+          <div class="steer-slider-wrap">
+            <span class="steer-limit">LEFT -30&deg;</span>
+            <input type="range" id="steer-slider" min="-30" max="30" value="0" step="1" aria-label="Steering Angle Slider">
+            <span class="steer-limit">RIGHT +30&deg;</span>
+          </div>
+
+          <div class="steer-buttons">
+            <button id="btn-steer-left" class="small-ctrl-btn">&larr; STEER LEFT</button>
+            <button id="btn-steer-center" class="small-ctrl-btn active">CENTER</button>
+            <button id="btn-steer-right" class="small-ctrl-btn">STEER RIGHT &rarr;</button>
+            <button id="btn-steer-auto" class="small-ctrl-btn gold">AUTO SWEEP</button>
+          </div>
+        </div>
+
+        <!-- Wheel Telemetry Drawer (Populates on clicking wheels) -->
+        <div class="wheel-telemetry-card" id="wheel-telemetry">
+          <div class="telem-header">
+            <span class="wheel-badge" id="telem-wheel-id">ALL WHEELS</span>
+            <span class="telem-title" id="telem-wheel-title">4WD ELECTRONIC TORQUE VECTORING</span>
+          </div>
+          <div class="telem-grid">
+            <div class="telem-stat">
+              <span class="t-label">STEERING ACTUATOR</span>
+              <span class="t-val" id="telem-steer-type">Active Mechatronic (±30° Front / ±3° Rear)</span>
+            </div>
+            <div class="telem-stat">
+              <span class="t-label">TORQUE SPLIT</span>
+              <span class="t-val" id="telem-torque-split">40% Front / 60% Rear Dynamic AWD</span>
+            </div>
+            <div class="telem-stat">
+              <span class="t-label">TIRES & BRAKES</span>
+              <span class="t-val" id="telem-tire-spec">Pirelli P-Zero Corsa &bull; 400mm CCMR Discs</span>
+            </div>
+            <div class="telem-stat">
+              <span class="t-label">DRIVE STATUS</span>
+              <span class="t-val gold-text" id="telem-status">Synchronized Quad-Wheel Traction</span>
+            </div>
+          </div>
+          <div class="wheel-hint">&bull; Click directly on any 3D wheel hub or button below to inspect individual corners</div>
+          <div class="wheel-selector-btns">
+            <button class="wh-btn" data-wheel="FL">Front-Left</button>
+            <button class="wh-btn" data-wheel="FR">Front-Right</button>
+            <button class="wh-btn" data-wheel="RL">Rear-Left</button>
+            <button class="wh-btn" data-wheel="RR">Rear-Right</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURE 3: SPEED & 0-60 ACCELERATION (I5) -->
+    <section class="story-section" id="performance" data-index="3">
+      <div class="section-content feature-content">
+        <div class="feature-tag">FEATURE 03 &bull; HYBRID VELOCITY</div>
+        <h2 class="feature-title">MAX SPEED & 0-60 ACCELERATION</h2>
+        <p class="feature-desc">
+          Supercapacitor-boosted instantaneous torque catapults the Countach LPI 800-4 from standstill to highway velocity in seconds, leaving scorched rubber and tire smoke in its wake.
+        </p>
+
+        <!-- Speed & Specs Grid (I5 requirement: max speeds & 0-60 speed) -->
+        <div class="performance-grid">
+          <div class="perf-card highlight-card">
+            <span class="perf-super">0 &ndash; 60 MPH ACCELERATION</span>
+            <div class="perf-main-number">
+              <span class="big-num" id="stat-0-60">2.8</span>
+              <span class="num-unit">SEC</span>
+            </div>
+            <span class="perf-sub">0 &ndash; 100 km/h: 2.8s &bull; 0 &ndash; 200 km/h: 8.6s</span>
+          </div>
+
+          <div class="perf-card highlight-card">
+            <span class="perf-super">MAXIMUM TOP SPEED</span>
+            <div class="perf-main-number">
+              <span class="big-num" id="stat-top-speed">221</span>
+              <span class="num-unit">MPH</span>
+            </div>
+            <span class="perf-sub">355 km/h Top Velocity &bull; 7-Speed ISR Transmission</span>
+          </div>
+
+          <div class="perf-card">
+            <span class="perf-super">COMBINED HYBRID OUTPUT</span>
+            <div class="perf-main-number">
+              <span class="big-num">814</span>
+              <span class="num-unit">CV</span>
+            </div>
+            <span class="perf-sub">780 CV V12 + 34 CV 48V e-Motor</span>
+          </div>
+
+          <div class="perf-card">
+            <span class="perf-super">SUPER-CAPACITOR TECH</span>
+            <div class="perf-main-number">
+              <span class="big-num">3X</span>
+              <span class="num-unit">POWER</span>
+            </div>
+            <span class="perf-sub">300% Lighter than Lithium-Ion Battery</span>
+          </div>
+        </div>
+
+        <!-- Launch Control Interactive Simulator -->
+        <div class="launch-control-box">
+          <div class="launch-telemetry">
+            <div class="gauge-display">
+              <div class="speedo-dial">
+                <div class="needle" id="speedo-needle"></div>
+                <div class="speedo-center">
+                  <span class="speedo-readout" id="speedo-num">0</span>
+                  <span class="speedo-unit">MPH</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="launch-stats">
+              <div class="live-row">
+                <span class="l-lbl">V12 TACHOMETER</span>
+                <span class="l-val" id="tach-val">850 RPM (IDLE)</span>
+              </div>
+              <div class="live-row">
+                <span class="l-lbl">TRANSMISSION</span>
+                <span class="l-val" id="gear-val">1ST GEAR</span>
+              </div>
+              <div class="live-row">
+                <span class="l-lbl">TIRE SMOKE BURNOUT</span>
+                <span class="l-val gold-text" id="smoke-val">STANDBY</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="launch-actions">
+            <button id="btn-launch-demo" class="launch-btn">
+              <span class="launch-pulse"></span>
+              <span class="launch-btn-text">TRIGGER LAUNCH CONTROL (0-60 MPH TEST)</span>
+            </button>
+            <span class="launch-disclaimer">Simulates V12 throttle surge, dynamic suspension squat & burning rubber smoke trail</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: CALL TO ACTION & FINALE (I6 & O4: Claim 1 of 112 Today) -->
+    <section class="story-section cta-section" id="cta" data-index="4">
+      <div class="section-content cta-content">
+        <div class="cta-crest-wrap">
+          <img src="2021-lamborghini-countach-lpi-800-4/textures/lamborghini_PNG10709.png" alt="Lamborghini Gold Crest" class="cta-bull-crest">
+        </div>
+        <div class="cta-tag">LIMITED GLOBAL ALLOCATION &bull; 1 OF 112</div>
+        <h2 class="cta-headline">CLAIM 1 OF 112 TODAY</h2>
+        <p class="cta-text">
+          Fifty years after the original LP 500 stunned the world at Geneva, the 2021 Lamborghini Countach LPI 800-4 delivers unprecedented V12 hybrid power and rarity. Only 112 individually serialized masterpieces will ever exist.
+        </p>
+
+        <!-- Prominent Animated Gold Button (as chosen by user) -->
+        <div class="cta-action-area">
+          <button id="claim-gold-btn" class="gold-hero-cta">
+            <span class="btn-shimmer"></span>
+            <span class="btn-label">CLAIM 1 OF 112 TODAY</span>
+            <span class="btn-sub">ACCESS DIGITAL KEY & ALLOCATION REGISTRY &rarr;</span>
+          </button>
+        </div>
+
+        <div class="allocation-ticker">
+          <div class="ticker-item">
+            <span class="t-count">112</span>
+            <span class="t-label">TOTAL PRODUCTION</span>
+          </div>
+          <div class="ticker-divider"></div>
+          <div class="ticker-item">
+            <span class="t-count gold-text" id="slots-remaining">7</span>
+            <span class="t-label">REMAINING SLOTS</span>
+          </div>
+          <div class="ticker-divider"></div>
+          <div class="ticker-item">
+            <span class="t-count">814 CV</span>
+            <span class="t-label">HYBRID V12</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- DIGITAL KEY CELEBRATION MODAL (As specified in user decision) -->
+  <div id="key-modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-card">
+      <button id="modal-close-btn" class="modal-close" aria-label="Close Modal">&times;</button>
+
+      <!-- Golden Confetti Canvas -->
+      <canvas id="confetti-canvas" class="confetti-layer"></canvas>
+
+      <div class="modal-body">
+        <div class="key-header">
+          <img src="2021-lamborghini-countach-lpi-800-4/textures/lamborghini_PNG10709.png" alt="Lamborghini Bull" class="modal-crest">
+          <div class="key-brand-titles">
+            <span class="k-super">AUTOMOBILI LAMBORGHINI S.P.A.</span>
+            <h3 class="k-title">VIP ALLOCATION PASS & DIGITAL KEY</h3>
+          </div>
+        </div>
+
+        <!-- 3D Luxury Metal Key Fob Card -->
+        <div class="key-fob-card">
+          <div class="fob-card-inner">
+            <div class="fob-top">
+              <span class="fob-chip"></span>
+              <span class="fob-serial" id="fob-serial-num">CHASSIS #042 / 112</span>
+            </div>
+            <div class="fob-center">
+              <img src="2021-lamborghini-countach-lpi-800-4/textures/Lamborghini-text-logo-1440x900.png" alt="LAMBORGHINI" class="fob-wordmark">
+              <span class="fob-edition">COUNTACH LPI 800-4</span>
+            </div>
+            <div class="fob-bottom">
+              <div class="fob-owner">
+                <span class="f-lbl">COMMISSIONED FOR</span>
+                <span class="f-val" id="fob-owner-name">DISTINGUISHED COLLECTOR</span>
+              </div>
+              <div class="fob-spec">
+                <span class="f-lbl">LIVERY</span>
+                <span class="f-val" id="fob-color-spec">GRIGIO TELESTO</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Customization Input -->
+        <div class="modal-form">
+          <label for="owner-input" class="input-label">ENGRAVE OWNER NAME ON DIGITAL CHASSIS PLAQUE:</label>
+          <div class="input-row">
+            <input type="text" id="owner-input" placeholder="Enter Full Name" maxlength="32" value="Distinguished Collector">
+            <button id="btn-update-name" class="gold-pill-btn">ENGRAVE</button>
+          </div>
+        </div>
+
+        <div class="modal-summary">
+          <div class="m-stat">
+            <span class="m-lbl">POWERTRAIN</span>
+            <span class="m-val">6.5L V12 + 48V Supercapacitor (814 CV)</span>
+          </div>
+          <div class="m-stat">
+            <span class="m-lbl">TOP SPEED</span>
+            <span class="m-val">221 MPH (355 KM/H) &bull; 0-60: 2.8s</span>
+          </div>
+          <div class="m-stat">
+            <span class="m-lbl">DRIVETRAIN</span>
+            <span class="m-val">Permanent AWD & 4-Wheel Active Steering</span>
+          </div>
+        </div>
+
+        <div class="modal-buttons">
+          <button id="btn-download-pass" class="gold-hero-cta small">
+            <span>DOWNLOAD CERTIFICATE</span>
+          </button>
+          <button id="btn-copy-code" class="glass-btn">
+            <span id="copy-btn-text">COPY VIP CODE: LPI800-042</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Audio Context Activation Prompt (floating helper if audio blocked) -->
+  <div id="audio-hint" class="audio-hint hidden">
+    <span>🔊 Click anywhere to activate supercar sound effects</span>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

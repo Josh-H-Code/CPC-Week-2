@@ -1,0 +1,140 @@
+# Lamborghini Countach LPI 800-4 MTL
+newmtl Material.012
+Ka 0.2 0.2 0.2
+Kd 0.7 0.7 0.7
+Ks 0.9 0.9 0.9
+Ns 80.0
+d 1.0
+
+newmtl Material.002
+Ka 0.1 0.1 0.1
+Kd 0.15 0.15 0.15
+Ks 0.3 0.3 0.3
+Ns 40.0
+d 1.0
+map_Kd ../textures/TexturesCom_Plastic_CarbonFiber_1K_albedo.png
+map_Bump ../textures/TexturesCom_Plastic_CarbonFiber_1K_normal.png
+
+newmtl Material.003
+Ka 0.1 0.1 0.1
+Kd 0.12 0.12 0.12
+Ks 0.2 0.2 0.2
+Ns 30.0
+d 1.0
+
+newmtl Material.004
+Ka 0.05 0.05 0.05
+Kd 0.1 0.1 0.15
+Ks 0.95 0.95 0.95
+Ns 120.0
+d 0.3
+
+newmtl Material.005
+Ka 0.2 0.0 0.0
+Kd 0.8 0.05 0.05
+Ks 0.8 0.8 0.8
+Ns 50.0
+d 1.0
+
+newmtl Material.007
+Ka 0.05 0.05 0.05
+Kd 0.1 0.1 0.15
+Ks 0.95 0.95 0.95
+Ns 120.0
+d 0.35
+
+newmtl Material.008
+Ka 0.3 0.0 0.0
+Kd 0.9 0.05 0.05
+Ks 0.9 0.9 0.9
+Ns 60.0
+d 1.0
+
+newmtl Material.009
+Ka 0.3 0.3 0.35
+Kd 0.95 0.95 1.0
+Ks 1.0 1.0 1.0
+Ns 100.0
+d 1.0
+
+newmtl Material.010
+Ka 0.3 0.3 0.35
+Kd 0.95 0.95 1.0
+Ks 1.0 1.0 1.0
+Ns 100.0
+d 1.0
+
+newmtl Material.011
+Ka 0.2 0.2 0.2
+Kd 0.45 0.45 0.48
+Ks 0.85 0.85 0.85
+Ns 90.0
+d 1.0
+
+newmtl Material.013
+Ka 0.1 0.1 0.1
+Kd 0.2 0.2 0.2
+Ks 0.5 0.5 0.5
+Ns 50.0
+d 1.0
+
+newmtl Material.016
+Ka 0.2 0.2 0.2
+Kd 0.7 0.7 0.75
+Ks 0.95 0.95 0.95
+Ns 100.0
+d 1.0
+
+newmtl Material.017
+Ka 0.1 0.08 0.05
+Kd 0.3 0.25 0.2
+Ks 0.1 0.1 0.1
+Ns 15.0
+d 1.0
+
+newmtl Material.018
+Ka 0.0 0.0 0.0
+Kd 0.05 0.05 0.05
+Ks 0.0 0.0 0.0
+Ns 10.0
+d 0.5
+map_Kd ../textures/internal_ground_ao_texture.jpeg
+
+newmtl Material.020
+Ka 0.2 0.2 0.2
+Kd 0.7 0.7 0.7
+Ks 0.9 0.9 0.9
+Ns 70.0
+d 1.0
+
+newmtl Material.025
+Ka 0.1 0.1 0.1
+Kd 0.12 0.12 0.12
+Ks 0.15 0.15 0.15
+Ns 20.0
+d 1.0
+map_Kd ../textures/pzer2.jpeg
+
+newmtl Material.029
+Ka 0.2 0.2 0.2
+Kd 0.8 0.8 0.8
+Ks 0.5 0.5 0.5
+Ns 50.0
+d 1.0
+map_Kd ../textures/license_albedo.png
+map_Bump ../textures/license_bump.png
+
+newmtl Material.042
+Ka 0.2 0.15 0.0
+Kd 0.9 0.7 0.05
+Ks 0.8 0.8 0.8
+Ns 60.0
+d 1.0
+
+newmtl Lamborghini-text-logo-1440x900
+Ka 0.2 0.2 0.2
+Kd 0.8 0.8 0.8
+Ks 0.9 0.9 0.9
+Ns 80.0
+d 1.0
+map_Kd ../textures/Lamborghini-text-logo-1440x900.png
